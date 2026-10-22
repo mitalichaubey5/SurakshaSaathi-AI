@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+ * Elderly-first base: a slightly larger default font and calm sky palette.
+ * All focusable elements get a thick high-contrast focus ring (keyboard use).
+ */
+:root {
+  font-size: 118%; /* ~18.9px base — easier to read */
+}
+
+body {
+  @apply bg-sky-50 text-slate-900 antialiased;
+  margin: 0;
+}
+
+:focus-visible {
+  outline: 4px solid #0369a1;
+  outline-offset: 2px;
+  border-radius: 0.5rem;
+}
+
+/* Keep long risk labels from overflowing on small screens */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}

@@ -1,0 +1,231 @@
+/**
+ * All user-facing strings, organised per language.
+ * Add a new language by adding a key to this object (e.g. 'mr', 'ta').
+ * Keys must stay identical across languages — keep both lists in sync.
+ */
+export const LANGS = { EN: 'en', HI: 'hi' };
+
+export const strings = {
+  en: {
+    appName: 'SurakshaSaathi AI',
+    slogan: 'Pause. Verify. Then Trust.',
+    tagline: 'Your safety companion for messages, links and screenshots.',
+
+    authTitle: 'Sign in to continue',
+    authSubtitle: 'Your safety checks stay private to your account.',
+    loginTab: 'Sign In',
+    registerTab: 'Create Account',
+    nameLabel: 'Your name',
+    namePlaceholder: 'For example: Sunita Devi',
+    emailLabel: 'Email',
+    emailPlaceholder: 'you@example.com',
+    passwordLabel: 'Password',
+    passwordPlaceholder: 'At least 6 characters',
+    showPassword: 'Show password',
+    hidePassword: 'Hide password',
+    loginButton: 'Sign In',
+    registerButton: 'Create My Account',
+    authBusy: 'Please wait…',
+    toggleToRegister: 'New here? Create an account',
+    toggleToLogin: 'Already have an account? Sign in',
+    logout: 'Sign Out',
+    greeting: 'Namaste,',
+    signingIn: 'Signing you in…',
+    creatingAccount: 'Creating your account…',
+    sessionExpired: 'Your session has ended. Please sign in again.',
+    authNameError: 'Please enter your name (at least 2 letters).',
+    authEmailError: 'Please enter a valid email address.',
+    authPasswordError: 'Password must be at least 6 characters.',
+
+    primaryAction: 'Check This',
+    secondaryAction: 'Ask Trusted Person',
+    checkAnother: 'Check Another Message',
+
+    checkTitle: 'Paste the suspicious message or link',
+    inputLabel: 'The suspicious message or link you received',
+    inputPlaceholder: 'Paste the message or link you received here…',
+    analyzeButton: 'Check It Now',
+
+    or: 'or',
+    uploadLabel: 'Or check a screenshot',
+    uploadHint: 'PNG, JPG or WebP. Up to 5 MB.',
+    chooseFile: 'Choose a Screenshot',
+    removeFile: 'Remove',
+    fileSelected: 'Selected file',
+    chooseFileFirst: 'Please choose a screenshot first.',
+
+    checking: 'Checking… please wait a moment',
+    readingScreenshot: 'Reading the screenshot…',
+
+    riskLow: 'Low Risk',
+    riskMedium: 'Needs Verification',
+    riskHigh: 'High Risk',
+    riskLowDesc: 'This looks safe. Still, never share OTP, PIN or passwords.',
+    riskMediumDesc: 'Some things look unclear. Check with a trusted person first.',
+    riskHighDesc: 'This looks like a scam. Do not click, share or reply.',
+
+    whySuspicious: 'Why is it suspicious?',
+    whatToDoNow: 'What should I do right now?',
+    safeActionsTitle: 'Safe to do',
+    prohibitedActionsTitle: 'Please do NOT do these',
+    verificationTitle: 'How to verify this is real',
+    matchedSignalsTitle: 'What we noticed',
+
+    trustedTitle: 'Ask My Trusted Person',
+    trustedHint: 'We will send an alert to your trusted person so they can help you decide.',
+    trustedNameLabel: 'Trusted person’s name',
+    trustedNamePlaceholder: 'For example: Ravi (my son)',
+    trustedPhoneLabel: 'Their phone number',
+    trustedPhonePlaceholder: 'For example: 9876543210',
+    sendAlert: 'Send the Alert',
+    sendingAlert: 'Sending the alert…',
+    alertSent: 'Alert sent. Your trusted person can contact you soon.',
+    alertFailed: 'Could not send the alert. Please check the details and try again.',
+    close: 'Close',
+
+    howItWorksTitle: 'How it works',
+    howStep1: 'Paste the suspicious message, link or screenshot.',
+    howStep2: 'We check it and tell you if it is risky.',
+    howStep3: 'Not sure? Ask your trusted person for a second opinion.',
+
+    emergencyHint: 'In an emergency, call 1930 (cybercrime) or 112 (police).',
+
+    emergencyButton: 'Emergency Help',
+    emergencyTitle: 'Emergency Help',
+    emergencyLoading: 'Loading emergency help…',
+    emergencyError: 'Could not load emergency help. Please check your internet and try again.',
+    emergencyHelplineTitle: 'Call these helplines — free and 24x7',
+    emergencyStepsTitle: 'Do these things right now',
+    emergencyReportTitle: 'File a complaint online',
+    emergencyReportHint: 'You can also complain on the official government website.',
+    openReportSite: 'Open cybercrime.gov.in (official website)',
+    emergencyTypeHint: 'In the address bar, type cybercrime.gov.in yourself. Never use a link from a suspicious message.',
+    emergencyBack: 'Back to Home',
+
+    tryAgain: 'Try Again',
+
+    emptyInputError: 'Please paste the message or link first.',
+    fileTypeError: 'That file type is not supported. Please choose a PNG, JPG or WebP picture.',
+    fileSizeError: 'The picture is too large. Please choose one below 5 MB.',
+    networkError: 'Cannot reach the server. Please check your internet and try again.',
+    validationError: 'Please check what you entered:',
+    unexpectedError: 'Something went wrong. Please try again.',
+
+    loadingStatus: 'Loading the result…',
+    resultStatus: 'Analysis result',
+  },
+
+  hi: {
+    appName: 'SurakshaSaathi AI',
+    slogan: 'Ruko. Jancho. Phir Bharosa Karo.',
+    tagline: 'Messages, links aur screenshots ke liye aapka safety saathi.',
+
+    authTitle: 'Aage badhne ke liye sign in karein',
+    authSubtitle: 'Aapke safety checks sirf aapke account ke liye private rehte hain.',
+    loginTab: 'Sign In',
+    registerTab: 'Naya Account',
+    nameLabel: 'Aapka naam',
+    namePlaceholder: 'Jaise: Sunita Devi',
+    emailLabel: 'Email',
+    emailPlaceholder: 'you@example.com',
+    passwordLabel: 'Password',
+    passwordPlaceholder: 'Kam se kam 6 akshar',
+    showPassword: 'Password dikhayein',
+    hidePassword: 'Password chhupayein',
+    loginButton: 'Sign In Karein',
+    registerButton: 'Mera Account Banayein',
+    authBusy: 'Kripya rukein…',
+    toggleToRegister: 'Naye hain? Account banayein',
+    toggleToLogin: 'Pehle se account hai? Sign in karein',
+    logout: 'Sign Out',
+    greeting: 'Namaste,',
+    signingIn: 'Aapko sign in kiya ja raha hai…',
+    creatingAccount: 'Aapka account banaya ja raha hai…',
+    sessionExpired: 'Aapka session khatam ho gaya. Kripya dobara sign in karein.',
+    authNameError: 'Kripya apna naam likhein (kam se kam 2 akshar).',
+    authEmailError: 'Kripya sahi email address likhein.',
+    authPasswordError: 'Password kam se kam 6 akshar ka hona chahiye.',
+
+    primaryAction: 'Ye Check Karein',
+    secondaryAction: 'Trusted Vyakti Se Puchhein',
+    checkAnother: 'Doosra Message Check Karein',
+
+    checkTitle: 'Suspicious message ya link paste karein',
+    inputLabel: 'Aapko mila suspicious message ya link',
+    inputPlaceholder: 'Aapko mila message ya link yahan paste karein…',
+    analyzeButton: 'Abhi Check Karein',
+
+    or: 'ya',
+    uploadLabel: 'Ya screenshot check karein',
+    uploadHint: 'PNG, JPG ya WebP. 5 MB tak.',
+    chooseFile: 'Screenshot Chunein',
+    removeFile: 'Hataayein',
+    fileSelected: 'Chuni gayi file',
+    chooseFileFirst: 'Pehle ek screenshot chunein.',
+
+    checking: 'Check ho raha hai… kripya ek pal rukein',
+    readingScreenshot: 'Screenshot padha ja raha hai…',
+
+    riskLow: 'Kam Khatra',
+    riskMedium: 'Verify Karna Zaroori',
+    riskHigh: 'Bahut Khatra',
+    riskLowDesc: 'Ye thik lagta hai. Phir bhi OTP, PIN ya password kisi ko na batayein.',
+    riskMediumDesc: 'Kuch cheezein saaf nahi hain. Pehle kisi bharosemand se puchhein.',
+    riskHighDesc: 'Ye scam lagta hai. Koi link na dabayein, kuch share na karein.',
+
+    whySuspicious: 'Ye kyon suspicious hai?',
+    whatToDoNow: 'Abhi mujhe kya karna chahiye?',
+    safeActionsTitle: 'Karne ke liye safe kadam',
+    prohibitedActionsTitle: 'Ye kaam bilkul mat karein',
+    verificationTitle: 'Ye sach hai, kaise check karein',
+    matchedSignalsTitle: 'Humne kya dekha',
+
+    trustedTitle: 'Mere Trusted Vyakti Se Puchhein',
+    trustedHint: 'Hum aapke trusted vyakti ko ek alert bhejenge taaki wo aapki madad kar sakein.',
+    trustedNameLabel: 'Trusted vyakti ka naam',
+    trustedNamePlaceholder: 'Jaise: Ravi (mera beta)',
+    trustedPhoneLabel: 'Unka phone number',
+    trustedPhonePlaceholder: 'Jaise: 9876543210',
+    sendAlert: 'Alert Bhejein',
+    sendingAlert: 'Alert bheja ja raha hai…',
+    alertSent: 'Alert bhej diya gaya. Aapka trusted vyakti jald aapse sampark karega.',
+    alertFailed: 'Alert nahi bhej paye. Kripya details check karke dobara try karein.',
+    close: 'Band Karein',
+
+    howItWorksTitle: 'Ye kaise kaam karta hai',
+    howStep1: 'Suspicious message, link ya screenshot paste karein.',
+    howStep2: 'Hum check karke batayenge ke ye khatarnak hai ya nahi.',
+    howStep3: 'Shak ho? Trusted vyakti se doosri raay lein.',
+
+    emergencyHint: 'Emergency mein 1930 (cybercrime) ya 112 (police) par call karein.',
+
+    emergencyButton: 'Emergency Madad',
+    emergencyTitle: 'Emergency Madad',
+    emergencyLoading: 'Emergency madad load ho rahi hai…',
+    emergencyError: 'Emergency madad load nahi ho payi. Internet check karke dobara try karein.',
+    emergencyHelplineTitle: 'In helpline nambaron par call karein — free aur 24x7',
+    emergencyStepsTitle: 'Ye kaam turant karein',
+    emergencyReportTitle: 'Online shikayat likhein',
+    emergencyReportHint: 'Aap sarkari website par online shikayat bhi likh sakte hain.',
+    openReportSite: 'cybercrime.gov.in kholen (sarkari website)',
+    emergencyTypeHint: 'Address bar mein khud type karein: cybercrime.gov.in. Suspicious message ka link kabhi use na karein.',
+    emergencyBack: 'Ghar (Home) Wapas',
+
+    tryAgain: 'Dobara Koshish Karein',
+
+    emptyInputError: 'Pehle message ya link paste karein.',
+    fileTypeError: 'Ye file type sahi nahi hai. PNG, JPG ya WebP picture chunein.',
+    fileSizeError: 'Picture bahut badi hai. 5 MB se chhoti picture chunein.',
+    networkError: 'Server se sampark nahi ho paya. Internet check karke dobara try karein.',
+    validationError: 'Kripya ye check karein:',
+    unexpectedError: 'Kuch galat ho gaya. Kripya dobara try karein.',
+
+    loadingStatus: 'Result load ho raha hai…',
+    resultStatus: 'Analysis ka result',
+  },
+};
+
+/** Returns the string table for a language code ('en' default, 'hi'). */
+export function stringsFor(lang) {
+  return strings[lang === LANGS.HI ? LANGS.HI : LANGS.EN];
+}

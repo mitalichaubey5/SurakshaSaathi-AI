@@ -1,0 +1,80 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: surakshasaathi-ai-backend
+
+  servlet:
+    multipart:
+      max-file-size: 5MB
+      max-request-size: 6MB
+
+  datasource:
+    # Prototype default: in-memory H2 (zero setup). Switch to MySQL for real runs:
+    # url: jdbc:mysql://localhost:3306/suraksha_saathi?useSSL=false&serverTimezone=UTC
+    # username: ${DB_USER:root}
+    # password: ${DB_PASS:root}
+    url: jdbc:h2:mem:surakshasaathi;DB_CLOSE_DELAY=-1
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: ""
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+
+  h2:
+    console:
+      enabled: true
+
+app:
+  # Privacy-first: store only what is needed, never the analyzed content itself.
+  security:
+    retain-analyzed-content: false
+    alert-retention-days: 30
+    allowed-origins: http://localhost:5173,http://localhost:3000
+
+  jwt:
+    secret: ${JWT_SECRET:changeme-very-long-secret-key-for-development-only-please-change}
+    expiration-ms: 3600000
+
+  llm:
+    enabled: true                 # set false to run purely on the rule engine (mock mode)
+    provider: openai
+    api-key: ${OPENAI_API_KEY:}
+    model: gpt-4o-mini
+    base-url: https://api.openai.com/v1
+    timeout-seconds: 20
+
+  ocr:
+    tessdata-path: ${TESSDATA_PREFIX:C:/Program Files/Tesseract-OCR/tessdata}
+    default-language: eng
+
+  # Meta WhatsApp Cloud API. All secrets come from environment variables and are
+  # never committed. Sending stays disabled by default; Phase 1 only uses
+  # verify-token + app-secret for the webhook endpoint.
+  whatsapp:
+    enabled: ${WHATSAPP_ENABLED:false}
+    # Second, independent switch: real sends require BOTH enabled=true and
+    # sending-enabled=true. Env: WHATSAPP_SENDING_ENABLED.
+    sending-enabled: ${WHATSAPP_SENDING_ENABLED:false}
+    access-token: ${WHATSAPP_ACCESS_TOKEN:}
+    phone-number-id: ${WHATSAPP_PHONE_NUMBER_ID:}
+    app-secret: ${WHATSAPP_APP_SECRET:}
+    verify-token: ${WHATSAPP_WEBHOOK_VERIFY_TOKEN:}
+    test-recipient: ${WHATSAPP_TEST_RECIPIENT:}
+    test-recipients: ${WHATSAPP_TEST_RECIPIENTS:}
+    graph-base-url: ${WHATSAPP_GRAPH_BASE_URL:https://graph.facebook.com}
+    api-version: ${WHATSAPP_API_VERSION:v21.0}
+    template-name: ${WHATSAPP_TEMPLATE_NAME:hello_world}
+    template-language: ${WHATSAPP_TEMPLATE_LANGUAGE:en_US}
+    timeout-seconds: ${WHATSAPP_TIMEOUT_SECONDS:15}
+
+  cors:
+    allowed-origins: http://localhost:5173,http://localhost:3000
+
+logging:
+  level:
+    com.surakshasaathi: INFO
